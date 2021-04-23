@@ -1,0 +1,78 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Akshat
+"""
+
+
+#imports
+import pygame
+import tkinter as tkr
+#creating window
+player=tkr.Tk()
+
+
+
+
+
+#editing window
+player.title("Music player")
+player.geometry("210x350")
+
+
+
+
+
+#get song
+
+file = 'song2.mp3'
+pygame.mixer.init()
+pygame.mixer.music.load(file)
+pygame.mixer.music.play()
+
+
+
+
+
+
+#functions
+def play():
+    pygame.mixer.init()
+    pygame.mixer.music.load(file)
+    pygame.mixer.music.play()
+    
+def Exitplayer():
+    pygame.mixer.music.pause()
+def unpause():
+    pygame.mixer.music.unpause()
+
+
+
+
+
+
+#register buttons
+button1 = tkr.Button(player,height=5,width=3,text='PLAY',command=play)
+button1.pack(fill="x")
+button1 = tkr.Button(player,height=5,width=3,text='PAUSE',command=Exitplayer)
+button1.pack(fill="x")
+button1 = tkr.Button(player,height=5,width=3,text='UNPAUSE',command=unpause)
+button1.pack(fill="x")
+
+
+
+
+
+
+#song name
+label1= tkr.LabelFrame(player,text='Song Name')
+label1.pack(fill="both",expand="yes")
+contents1= tkr.Label(label1,text=file)
+contents1.pack()
+
+
+
+
+
+
+#activate tkinter
+player.mainloop()
