@@ -1,0 +1,2 @@
+# Music-player-system-in-python
+We have given a project to make a software on Music Player System for Desktop using python by importing Pygame and Tkinter. We are making a software with four group members on Music Player System for Desktop in which we have divided our project into 4 categories: 1. Addition and deletion of song into playlist 2. Play, stop, pause and rewind the song 3. Volume and close button 4. Full overlook of our software Our project includes:  Play button  Stop button  Rewind button  Paused button  Volume button  Mute button  Close button
